@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mthiesso <mthiesso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/03 15:17:14 by mthiesso          #+#    #+#             */
-/*   Updated: 2023/02/08 17:00:06 by mthiesso         ###   ########.fr       */
+/*   Created: 2023/02/08 13:09:45 by mthiesso          #+#    #+#             */
+/*   Updated: 2023/02/08 17:03:49 by mthiesso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef	CONTACT_HPP
+# define CONTACT_HPP
 
 #include <iostream>
 #include <sstream>
-#include "Contact.hpp"
+#include <string>
 
-class	Phonebook{
+class	Contact{
 
 public :
 
-	Phonebook(void);
-	~ Phonebook(void);
+	Contact(void);
+	~ Contact(void);
 
-	void	add(void);
-	void	search(void);
+	void	init_data(void);
+	void	column_display(void);
+	void	contact_display(void);
 
 private :
 
-	Contact	_tab[8];
-	int	nb_contact;
+	std::string	_first_name;
+	std::string	_last_name;
+	std::string	_nickname;
+	std::string	_phone_number;
+	std::string	_darkest_secret;
 };
 
 #endif

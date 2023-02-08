@@ -6,7 +6,7 @@
 #    By: mthiesso <mthiesso@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/03 15:14:11 by mthiesso          #+#    #+#              #
-#    Updated: 2023/02/07 17:39:02 by mthiesso         ###   ########.fr        #
+#    Updated: 2023/02/08 13:48:00 by mthiesso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,19 +21,19 @@ BPRP = \033[135m
 CC =	c++
 CXXFLAGS =	-Wall -Wextra -Werror -std=c++98
 NAME =	phonebook
-SRC =	phonebook.cpp \
-		main.cpp
+SRC =	Phonebook.cpp \
+		Contact.cpp \
+		main.cpp \
 
 OBJ =	${SRC:.cpp=.o}
-DEL = 	rm -rf
+DEL = 	rm -f
 
 all:	${NAME}
 
 ${NAME}:	${OBJ}
 			@echo "${PRP}-----compilation-----${RST}"
 			@echo "[PHONEBOOK]	${CYN}Compilating... 🔨${RST}"
-			@${CC} ${OBJ} ${CXXFLAGS} -lpthread \
-			-o ${NAME}
+			@${CC} ${CXXFLAGS} ${OBJ} -o ${NAME}
 			@echo "[PHONEBOOK]	${GRN}OK ${RST}"
 			@echo "${GRN}Ready to execute ✅${RST}"
 clean:
@@ -48,4 +48,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:		all clean fclean
+.PHONY:		all clean fclean re
