@@ -6,7 +6,7 @@
 /*   By: mthiesso <mthiesso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 17:38:06 by mthiesso          #+#    #+#             */
-/*   Updated: 2023/02/08 16:35:33 by mthiesso         ###   ########.fr       */
+/*   Updated: 2023/02/10 17:14:24 by mthiesso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ int	main()
  std::cout << "|  ___/ |  __  || |  | || . ` ||  __|  |  _ < | |  | || |  | ||  <  " << std::endl;
  std::cout << "| |     | |  | || |__| || |\\  || |____ | |_) || |__| || |__| || . \\ " << std::endl;
  std::cout << "|_|     |_|  |_| \\____/ |_| \\_||______||____/  \\____/  \\____/ |_|\\_\\ " << std::endl;
+ std::cout << "EXISTING COMMANDS : " << std::endl;
+ std::cout << "- ADD (add a new contact)" << std::endl;
+ std::cout << "- SEARCH (display all contacts and search for a indivual contact)" << std::endl;
+ std::cout << "- EXIT (exit the program)" << std::endl;
  std::cout << "ENTER YOUR COMMAND $" << std::endl;
  std::getline(std::cin, input);
  for (int x=0; x<(int)input.size(); x++)

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mthiesso <mthiesso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 15:15:33 by mthiesso          #+#    #+#             */
-/*   Updated: 2023/02/08 18:24:17 by mthiesso         ###   ########.fr       */
+/*   Updated: 2023/02/10 18:04:27 by mthiesso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ Phonebook::~Phonebook(void)
 
 void	Phonebook::add(void)
 {
-	this->_tab[this->nb_contact % 8].init_data();
-	this->nb_contact++;
+	if (this->_tab[this->nb_contact % 8].init_data() == 0)
+		this->nb_contact++;
 	return;
 }
 
@@ -44,7 +44,7 @@ void	Phonebook::search(void)
 	else
 	{
 		std::cout << " ---------- ---------- ---------- ---------- " << std::endl;
-		std::cout << "|Index     |First Name|Last Name |Nickname  |" << std::endl;
+		std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
 		std::cout << " ---------- ---------- ---------- ---------- " << std::endl;
 		for(int x=0; x<this->nb_contact && x<8; x++)
 		{
@@ -56,11 +56,16 @@ void	Phonebook::search(void)
 		std::string input;
 		int n;
 		std::getline(std::cin, input);
-		n = std::atoi(input.c_str());
-		if (n <= this->nb_contact)
-			this->_tab[n - 1].contact_display();
+		if (input.length() == 1)
+		{
+			n = std::atoi(input.c_str());
+			if (n > 0 && n <= std::min(this->nb_contact, 8))
+				this->_tab[n - 1].contact_display();
+			else
+				std::cout << "please enter an existing index" << std::endl;
+		}
 		else
-			std::cout << "please enter an existing index" << std::endl;
+			std::cout << "Please enter an existing index" << std::endl;
 	}
 	return;
 }

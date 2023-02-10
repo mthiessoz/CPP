@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mthiesso <mthiesso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:09:45 by mthiesso          #+#    #+#             */
-/*   Updated: 2023/02/08 17:03:49 by mthiesso         ###   ########.fr       */
+/*   Updated: 2023/02/10 16:02:19 by mthiesso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public :
 	Contact(void);
 	~ Contact(void);
 
-	void	init_data(void);
+	int		init_data(void);
 	void	column_display(void);
 	void	contact_display(void);
 
