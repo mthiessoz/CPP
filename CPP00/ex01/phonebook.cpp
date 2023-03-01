@@ -6,7 +6,7 @@
 /*   By: mthiesso <mthiesso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 15:15:33 by mthiesso          #+#    #+#             */
-/*   Updated: 2023/02/10 18:04:27 by mthiesso         ###   ########.fr       */
+/*   Updated: 2023/03/01 13:48:58 by mthiesso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,11 @@
 Phonebook::Phonebook(void)
 {
 	this->nb_contact = 0;
-	//std::cout << "Phonebook created" << std::endl;
 	return; 
 }
 
 Phonebook::~Phonebook(void)
 {
-	//std::cout << "nb_contact :" << this->nb_contact << std::endl; 
-	//std::cout << "Phonebook destroyed" << std::endl;
 	return;
 }
 
