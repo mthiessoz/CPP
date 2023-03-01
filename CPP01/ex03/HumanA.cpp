@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mthiesso <mthiesso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marlene <marlene@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:35:00 by mthiesso          #+#    #+#             */
-/*   Updated: 2023/02/24 21:08:05 by mthiesso         ###   ########.fr       */
+/*   Updated: 2023/03/01 00:19:30 by marlene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,14 @@ HumanA::HumanA(std::string name, Weapon &weapon) : _weapon(weapon)
 	this->_name = name;
 }
 
-HumanA::~ HumanA(void)
+HumanA::HumanA(Weapon &weapon) : _weapon(weapon)
 {
-	
+
+}
+
+HumanA::~HumanA(void)
+{
+
 }
 
 void	HumanA::attack(void)

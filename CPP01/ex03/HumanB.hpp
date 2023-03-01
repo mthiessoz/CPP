@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mthiesso <mthiesso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marlene <marlene@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:36:15 by mthiesso          #+#    #+#             */
-/*   Updated: 2023/02/24 20:48:16 by mthiesso         ###   ########.fr       */
+/*   Updated: 2023/03/01 10:43:18 by marlene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public :
 
 private :
 
-	Weapon		&_weapon;
+	Weapon		*_weapon;
 	std::string _name;
 };
 
