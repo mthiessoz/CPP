@@ -6,7 +6,7 @@
 /*   By: mthiesso <mthiesso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 15:27:55 by mthiesso          #+#    #+#             */
-/*   Updated: 2023/02/14 17:02:27 by mthiesso         ###   ########.fr       */
+/*   Updated: 2023/03/12 17:46:55 by mthiesso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 Zombie::Zombie(std::string name) : name(name)
 {
 
+}
+
+Zombie::Zombie(void)
+{
+	
 }
 
 Zombie::~Zombie(void)

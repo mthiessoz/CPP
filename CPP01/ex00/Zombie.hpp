@@ -6,7 +6,7 @@
 /*   By: mthiesso <mthiesso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 15:27:43 by mthiesso          #+#    #+#             */
-/*   Updated: 2023/02/14 17:03:30 by mthiesso         ###   ########.fr       */
+/*   Updated: 2023/03/12 17:46:34 by mthiesso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class	Zombie{
 public :
 
 	Zombie(std::string name);
+	Zombie(void);
 	~ Zombie(void);
 	void	announce(void);
 

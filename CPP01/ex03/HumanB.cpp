@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marlene <marlene@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mthiesso <mthiesso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:36:04 by mthiesso          #+#    #+#             */
-/*   Updated: 2023/03/01 10:43:32 by marlene          ###   ########.fr       */
+/*   Updated: 2023/03/12 17:45:48 by mthiesso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 HumanB::HumanB(std::string	name)
 {
 	this->_name = name;
+}
+HumanB::HumanB(void)
+{
+
 }
 
 HumanB::~HumanB(void)

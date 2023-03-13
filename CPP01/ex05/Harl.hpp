@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mthiesso <mthiesso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 16:35:23 by mthiesso          #+#    #+#             */
-/*   Updated: 2023/03/10 17:33:16 by mthiesso         ###   ########.fr       */
+/*   Created: 2023/03/12 16:54:21 by mthiesso          #+#    #+#             */
+/*   Updated: 2023/03/12 17:36:44 by mthiesso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	HUMANA_HPP
-# define HUMANA_HPP
+#ifndef	HARL_HPP
+# define HARL_HPP
 
 #include <iostream>
-#include <sstream>
+#include <fstream>
 #include <string>
-#include "Weapon.hpp"
 
-class	HumanA{
+class Harl
+{
+private:
+	void	debug(void);
+	void	info(void);
+	void	warning(void);
+	void	error(void);
 
-public :
-
-	HumanA(std::string name, Weapon &weapon);
-	HumanA(Weapon &weapon);
-	~ HumanA(void);
-	void	setWeapon(Weapon  &_weapon);
-	void	attack(void);
-
-private :
-
-	HumanA(void);
-	~ HumanA(void);
-	Weapon		&_weapon;
-	std::string _name;
+public:
+	void complain( std::string level);
+	Harl(void);
+	~ Harl(void);
 };
+
 #endif
